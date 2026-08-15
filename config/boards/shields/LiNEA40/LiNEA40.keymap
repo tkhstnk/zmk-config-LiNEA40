@@ -6,6 +6,11 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
+// ZキーなどのMod-Tapは、後続キーを押していても短押しならタップとして扱う。
+&mt {
+    flavor = "tap-preferred";
+};
+
 #define MOUSE 1
 #define MARK 2
 #define CURSOR 3
