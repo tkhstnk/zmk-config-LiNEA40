@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,
+            //スクロール方向を逆転,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -111,7 +111,7 @@
 &kp Q             &kp W         &kp E  &kp R                 &kp T                                    &kp Y        &kp U  &kp I      &kp O      &kp P
 &kp A             &kp S         &kp D  &kp F                 &kp G                                    &kp H        &kp J  &kp K      &kp L      &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C  &kp V                 &kp B                                    &kp N        &kp M  &kp COMMA  &kp DOT    &mt RIGHT_SHIFT SLASH
-&mt LALT LANG2    &kp LEFT_WIN  &none  &mt LEFT_CONTROL TAB  &lt 3 SPACE  &lt 6 DEL    &kp BACKSPACE  &lt 4 ENTER         &kp LC(Z)  &kp LC(Y)  &kp LANG1
+&mt LALT LANG2    &kp LEFT_WIN  &none  &mt LEFT_CONTROL TAB  &lt 3 SPACE  &lt 6 DEL    &kp BACKSPACE  &lt 4 ENTER         &kp LC(Z)  &kp LC(Y)  &lt 5 LANG1
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -122,7 +122,7 @@
 &kp Q             &kp W         &kp E  &kp R                 &kp T                                    &kp Y        &kp U  &kp I      &kp O          &kp P
 &kp A             &kp S         &kp D  &kp F                 &kp G                                    &kp H        &kp J  &kp K      &kp L          &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C  &kp V                 &kp B                                    &kp N        &kp M  &kp COMMA  &kp DOT        &mt RIGHT_SHIFT SLASH
-&mt LCTRL LANG2   &kp LEFT_ALT  &none  &mt LEFT_COMMAND TAB  &lt 3 SPACE  &lt 6 DEL    &kp BACKSPACE  &lt 4 ENTER         &kp LG(Z)  &kp LG(LS(Y))  &kp LANG1
+&mt LCTRL LANG2   &kp LEFT_ALT  &none  &mt LEFT_COMMAND TAB  &lt 3 SPACE  &lt 6 DEL    &kp BACKSPACE  &lt 4 ENTER         &kp LG(Z)  &kp LG(LS(Y))  &lt 5 LANG1
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -163,11 +163,11 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &trans      &trans  &trans  &trans  &trans
 &kp F6  &kp F7  &kp F8  &kp F9   &kp F10                    &kp C_MUTE  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp F11  &kp F12                    &trans      &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp F11  &kp F12                    &to 0       &to 1   &trans  &trans  &trans
 &trans  &trans  &trans  &trans   &trans   &trans    &trans  &trans              &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
+            sensor-bindings = <&re_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         WIRELESS {
