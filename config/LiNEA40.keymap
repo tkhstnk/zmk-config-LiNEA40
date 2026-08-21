@@ -110,6 +110,15 @@
 
             tap-ms = <20>;
         };
+
+        del_layer: delete_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <250>;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     macros {
@@ -136,7 +145,7 @@
 &kp Q             &kp W         &kp E  &kp R                 &kp T                                    &kp Y        &kp U  &kp I      &kp O      &kp P
 &kp A             &kp S         &kp D  &kp F                 &kp G                                    &kp H        &kp J  &kp K      &kp L      &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C  &kp V                 &kp B                                    &kp N        &kp M  &kp COMMA  &kp DOT    &mt RIGHT_SHIFT SLASH
-&mt LALT LANG2    &kp LEFT_WIN  &none  &mt LEFT_CONTROL TAB  &lt 3 SPACE  &lt 6 DEL    &kp BACKSPACE  &lt 4 ENTER         &kp LC(Z)  &kp LC(Y)  &lt 5 LANG1
+&mt LALT LANG2    &kp LEFT_WIN  &none  &mt LEFT_CONTROL TAB  &lt 3 SPACE  &del_layer 6 DEL  &kp BACKSPACE  &lt 4 ENTER         &kp LC(Z)  &kp LC(Y)  &lt 5 LANG1
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -147,7 +156,7 @@
 &kp Q             &kp W         &kp E  &kp R                 &kp T                                    &kp Y        &kp U  &kp I      &kp O          &kp P
 &kp A             &kp S         &kp D  &kp F                 &kp G                                    &kp H        &kp J  &kp K      &kp L          &lt 3 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C  &kp V                 &kp B                                    &kp N        &kp M  &kp COMMA  &kp DOT        &mt RIGHT_SHIFT SLASH
-&mt LCTRL LANG2   &kp LEFT_ALT  &none  &mt LEFT_COMMAND TAB  &lt 3 SPACE  &lt 6 DEL    &kp BACKSPACE  &lt 4 ENTER         &kp LG(Z)  &kp LG(LS(Z))  &lt 5 LANG1
+&mt LCTRL LANG2   &kp LEFT_ALT  &none  &mt LEFT_COMMAND TAB  &lt 3 SPACE  &del_layer 6 DEL  &kp BACKSPACE  &lt 4 ENTER         &kp LG(Z)  &kp LG(LS(Z))  &lt 5 LANG1
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
