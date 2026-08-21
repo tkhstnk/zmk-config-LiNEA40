@@ -10,9 +10,8 @@
 
 // ZキーなどのMod-Tapは、後続キーを押していても短押しならタップとして扱う。
 // これにより「zo」が「ZO」になる誤判定を避ける。
-&mt {
-    flavor = "tap-preferred";
-};
+
+&mt { flavor = "tap-preferred"; };
 
 #define MOUSE 2
 #define SYMBOLS 3
@@ -62,7 +61,7 @@
         layers = <SYMBOLS>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -89,6 +88,11 @@
         ClickNext {
             bindings = <&mkp MB5>;
             key-positions = <27 28>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
         };
     };
 
